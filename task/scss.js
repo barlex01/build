@@ -27,12 +27,13 @@ const scss = () => {
     return gulp.src(path.scss.src, {sourcemaps:app.isDev})
     
     .pipe(sassGlob())
-    .pipe(replace(/@img\//g,'../img/'))
+   
     .pipe(sass())
     .pipe(webpCss())
     .pipe(prefixer())
     .pipe(shorthand())
     .pipe(mediaGroup())
+    .pipe(replace(/@img\//g,'../img/'))
     .pipe(size({title: 'main.css'}))
     .pipe(gulp.dest(path.scss.dest, {sourcemaps:app.isDev}))
     .pipe(rename({ suffix:'.min'}))
