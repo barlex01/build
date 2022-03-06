@@ -20,12 +20,14 @@ import sassGlob from 'gulp-sass-glob';
 import webpCss from 'gulp-webp-css';
 import path from '../config/path.js';
 import app from '../config/app.js'
+import replace from 'gulp-replace';
 
 
 const scss = () => {
     return gulp.src(path.scss.src, {sourcemaps:app.isDev})
     
     .pipe(sassGlob())
+    .pipe(replace(/@img\//g,'../img/'))
     .pipe(sass())
     .pipe(webpCss())
     .pipe(prefixer())

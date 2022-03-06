@@ -7,6 +7,7 @@ import  size from 'gulp-size';
 import  path from '../config/path.js';
 import  app from '../config/app.js'
 import  webpHtml from 'gulp-webp-html';
+import replace from 'gulp-replace';
 
 
 
@@ -14,6 +15,7 @@ const html = () => {
     return gulp.src(path.html.src)
     
      .pipe(fileInclude())
+     .pipe(replace(/@img\//g, 'img/'))
      .pipe(webpHtml())
      .pipe(size({title: 'до сжатия'}))
      .pipe(htmlmin(app.htmlmin))
