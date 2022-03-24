@@ -12,7 +12,7 @@ const pug = () => {
     return gulp.src(path.pug.src)
    
      .pipe(pugs(app.pugs))
-     .pipe(webpHtml())
+
      .pipe(gulp.dest(path.pug.dest))
     //  .pipe(browserSync.stream())
 }

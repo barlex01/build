@@ -5,7 +5,7 @@ import gulp from 'gulp';
 
 import imagemin from 'gulp-imagemin';
 import newer from 'gulp-newer';
-import webP from 'gulp-webp';
+
 import gulpif from 'gulp-if';
 
 
@@ -17,7 +17,7 @@ const img = () => {
     return gulp.src(path.img.src)
     
     .pipe(newer(path.img.dest))
-    .pipe(webP())
+
     .pipe(gulp.dest(path.img.dest))
     .pipe(gulp.src(path.img.src))
     .pipe(newer(path.img.dest))

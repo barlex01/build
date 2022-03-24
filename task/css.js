@@ -9,9 +9,9 @@ import prefixer from'gulp-autoprefixer';
 import csso from'gulp-csso';
 import rename from'gulp-rename';
 import size from'gulp-size';
-import shorthand from'gulp-shorthand';
+
 import mediaGroup from'gulp-group-css-media-queries';
-import webpCss from'gulp-webp-css';
+
 
 import path from '../config/path.js';
 import app from '../config/app.js';
@@ -21,9 +21,9 @@ const css = () => {
     return src(path.css.src, {sourcemaps:app.isDev})
     .pipe(concat('main.css'))
     .pipe(cssImport())
-    .pipe(webpCss())
+
     .pipe(prefixer())
-    .pipe(shorthand())
+
     .pipe(mediaGroup())
     .pipe(size({title: 'main.css'}))
     .pipe(dest(path.css.dest, {sourcemaps:app.isDev}))

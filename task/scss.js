@@ -7,7 +7,7 @@ import prefixer from 'gulp-autoprefixer';
 import csso from'gulp-csso';
 import rename from'gulp-rename';
 import size from'gulp-size';
-import shorthand from 'gulp-shorthand';
+
 import mediaGroup from 'gulp-group-css-media-queries';
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
@@ -17,7 +17,7 @@ import sassGlob from 'gulp-sass-glob';
 
 
 
-import webpCss from 'gulp-webp-css';
+
 import path from '../config/path.js';
 import app from '../config/app.js'
 import replace from 'gulp-replace';
@@ -29,9 +29,9 @@ const scss = () => {
     .pipe(sassGlob())
    
     .pipe(sass())
-    .pipe(webpCss())
+
     .pipe(prefixer())
-    .pipe(shorthand())
+ 
     .pipe(mediaGroup())
     .pipe(replace(/@img\//g,'../img/'))
     .pipe(size({title: 'main.css'}))
