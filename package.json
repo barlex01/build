@@ -20,10 +20,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.16.7",
-    "@babel/preset-env": "^7.16.7",
-    "browser-sync": "^2.27.7",
-    "del": "^6.0.0",
+    "@babel/core": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "browser-sync": "^2.27.10",
+    "del": "^6.1.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
@@ -45,13 +45,13 @@
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify": "^3.0.2",
     "node-sass-tilde-importer": "^1.0.2",
-    "nth-check": "^2.0.1",
-    "sass": "^1.46.0",
-    "webpack": "^5.65.0",
+    "nth-check": "^2.1.1",
+    "sass": "^1.53.0",
+    "webpack": "^5.73.0",
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "find-versions": "^5.0.0",
+    "find-versions": "^5.1.0",
     "gulp-if": "^3.0.0",
     "jquery": "^3.6.0",
     "slick-carousel": "^1.8.1"
